@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peddy</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <!-- nav start -->
+    <nav class="w-11/12 flex mx-auto py-3 justify-between items-center ">
+      <div class="nav-left flex gap-2">
+        <button class="btn">
+        <img class=" logo" src="./images/logo.webp" alt="logo">
+          Peddy
+        </button>
+      </div>
+      <div class="navbtn hidden lg:flex gap-3">
+        <button class="btn">Home</button>
+        <button class="btn">Shop</button>
+        <button class="btn">Contact</button>
+      </div>
+      <button class="nav-end border w-10 h-10 rounded-full">
+        <img src="https://img.icons8.com/?size=48&id=34105&format=png" alt="icon">
+      </button>    
+    </nav>
+    <!-- nav ENd -->
+
+    <!-- Banner start -->
+    <div id="banner" class=" bg-white flex flex-col items-center justify-center text-center py-10">
+      <div class="banner-top pb-10">
+        <p class="text-xl text-gray-500">Bringing Families Together ❤️‍🔥 </p>
+      </div>
+      <div class="banner-middle max-w-lg">
+        <h2 class=" text-black text-5xl font-bold">Your Path to Adoption Starts Here</h2>
+        <p class="text-gray-400 text-xs py-5">It is a long established fact that a reader will be distracted by the readable content of
+          a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+          <button class="btn btn-success text-white text-lg">View more</button>
+      </div>
+      <div class="banner-img">
+        <img class="pt-10" src="./images/pet.webp" alt="pet">
+      </div>
+      <div class="banner-end max-w-lg">
+        <h2 class=" text-black text-3xl font-bold">Adopt  Your  Best Friend</h2>
+        <p class="text-gray-400 text-xs py-5">It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+      </div>
+    </div>
+    <!-- Banner End -->
+  </header>
+  <main>
+    <!-- Adopt Your Best Friend Section -->
+    <section class="py-12 bg-gray-50">
+      <!-- category button -->
+      <div id="category-btn-container" class="w-11/12 lg:gap-60 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center mx-auto"></div>
+
+      <!-- best deal for you div -->
+      <div class="best-deal w-11/12   mx-auto justify-between py-10 flex">
+        <h2 class="font-bold text-black">Best Deal For you</h2>
+        <button class="btn btn-success text-white"> Sort by Price </button>
+      </div>
+
+      <!-- card container -->
+      <div id="cardContainer" class="flex">
+        <div  class="w-11/12 flex">
+          <div id="cards" class="w-[75%] grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2  lg:ml-16 gap-44 "></div>
+          <!-- gellary -->
+        <div id="selected-cards" class="bg-white p-4 shadow-md rounded-xl max-w-6xl mx-auto w-[25%] h-full">
+          <h2>Gellary</h2>
+          <div id="gallery" class="grid grid-cols-21sm:grid-cols-2 md:grid-cols-3 gap-2">
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- Adopt Your Best Friend Section end -->
+
+    <!--pet Modal start -->
+<dialog id="petModal" class="modal modal-bottom sm:modal-middle">
+  <div id="pets-modal-content" class="modal-box">
+    
+  </div>
+</dialog>
+
+    <!--pet Modal end -->
+    <!-- adopt Modal start -->
+<dialog id="adoptModal" class="modal">
+  <div id="pets-modal-content" class="modal-box text-center">
+    <h2 class="text-green-300 font-bold text-lg">Congrats!</h2>
+    <p class="countDown text-2xl font-bold">0</p>
+    <h3 class="py-4">You Have Succesfully Adopt a Pet</h3>
+  </div>
+</dialog>
+
+    <!-- adopt Modal end -->
+  </main>
+  <script src="js/pet.js"></script>
+</body>
+
+</html>
